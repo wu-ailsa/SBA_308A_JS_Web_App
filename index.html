@@ -6,6 +6,9 @@
     <title>Sip and Read Jokes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script type="module" src="main.js" defer></script>
 </head>
   <body>
     <container id="header-top-umbrella">
@@ -15,20 +18,26 @@
                 The title reads "Jokes API". <br>
                 To get started, select the number of random jokes you'd like the 'Jokes API' book to fetch. 
             </p>
+            <div class="justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination text-center">
+                    <li class="page-item"><a class="page-link" id="joke1" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" id="joke2" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" id="joke3" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" id="joke4" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" id="joke5" href="#">5</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </container>
     <container id="open-book">
         <div class="image-container" id="book-holder">
             <img src="img\blank-page.jpg" alt="book-page"/>
-            <div class="overlay-text">"Your text here" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit risus id sem maximus semper. Nam sit amet placerat augue. Aenean porta, purus sed congue suscipit, lacus urna dapibus tortor, nec eleifend dui urna sed arcu. Sed metus libero, venenatis a diam nec, gravida volutpat mauris. Aenean id velit turpis. Nulla massa ante, finibus eu mi varius, imperdiet rhoncus felis. Pellentesque nec convallis tortor. Phasellus et fringilla eros.
+            <div class="overlay-text">
 
-                Proin mattis massa non arcu rutrum, nec hendrerit enim vehicula. Phasellus varius est vitae ligula commodo semper. Morbi elementum placerat lorem, vel molestie nisl tristique sit amet. Sed quis mattis mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum nec aliquet lectus. Nullam ante mauris, vestibulum eget rhoncus et, cursus at diam.
-                
-                Integer sed mollis nibh, eu ornare dolor. Donec congue ligula risus, ac lacinia urna posuere aliquet. Quisque in imperdiet dui. Maecenas nunc massa, ultricies vitae ligula eu, posuere ultricies est. Aenean sed lorem pretium, ultrices augue sit amet, pretium dui. Nam at lorem leo. Suspendisse porttitor lacus a tempor posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris ut neque finibus, cursus orci faucibus, mollis nisi. Integer dictum tortor felis, sed ultricies leo egestas at. Integer nec nulla vitae mi varius placerat at eu tellus. Duis quis imperdiet lacus. Phasellus fringilla tristique arcu, eget porttitor quam. Cras id libero nec tortor porttitor porta ut vel dui. Nulla congue vitae sapien sed condimentum.
-                
-                Maecenas in fermentum ex, non vestibulum mauris. Mauris ac ligula pretium, pulvinar felis sit amet, suscipit lacus. In eget porta ligula. Donec ac nibh arcu. Sed nec interdum mi. Nunc ultrices, magna vel scelerisque venenatis, sapien risus pulvinar tellus, elementum eleifend arcu nibh sagittis diam. Aenean consectetur ullamcorper ornare. Vivamus pretium porttitor arcu, sed aliquet dui mattis vitae.
-                
-                Nam vehicula massa id vestibulum scelerisque. Donec sed massa mi. Duis commodo elit vitae lectus commodo, vitae tristique erat blandit. Curabitur blandit, elit sed tincidunt porttitor, augue nibh suscipit ex, sed commodo felis risus condimentum risus. Duis eget condimentum turpis. Integer pretium sapien a enim pretium, sit amet interdum sapien euismod. Morbi ullamcorper rhoncus nunc, et mollis libero imperdiet in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras consectetur nisi metus, at tristique eros condimentum ut. Sed egestas mauris et elit maximus, ut iaculis nulla ornare. Sed maximus neque nec quam congue venenatis. Nunc commodo ex sit amet lacus pharetra maximus. Proin pharetra, sem eu euismod egestas, ligula odio dictum dui, quis aliquam nisi sapien in orci. In ac nibh leo. Donec diam lectus, scelerisque a pulvinar nec, aliquam vitae nunc. Ut pretium in felis nec sodales.</div>
+                  Lorem Ipsum
+            </div>
         </div>
     </container>
     <footer>
@@ -36,5 +45,7 @@
         <p><a href="https://github.com/wu-ailsa/">github: @wu-ailsa</a></p>
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>  
+</body>
 </html>
