@@ -8,7 +8,6 @@ const jokesContainer = document.getElementById("jokesContainer");
 const jokeArray = [joke1, joke2, joke3, joke4, joke5];
 
 let jokeCount = 1;
-
 const options = {
     method: 'GET',
     url: 'https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes',
@@ -18,20 +17,51 @@ const options = {
     }
   };
 
+  
+jokeArray.forEach((jokeButton) => {
+    jokeButton.addEventListener("click", async function () {
+        jokeCount = jokeArray.indexOf(jokeButton) + 1;
+        await refreshJokes();
+    });
+});
+
+async function removeJokes() {
+    while (jokesContainer.firstChild) {
+        jokesContainer.removeChild(jokesContainer.lastChild);
+    }
+}
+
+async function refreshJokes() {
+    removeJokes();
+    let jokesTexts = await getJokes();
+    jokesTexts.forEach((jokeText) => {
+        jokesContainer.appendChild(jokeText);
+    });
+}
+
+async function getJokes() {
+    const jokesTexts = [];
+    for (let i = 0; i < jokeCount; i++) {
+        try {
+            const response = await axios.request(options);
+            response.data.forEach((joke) => {
+                const jokeText = document.createElement("p");
+                jokeText.innerHTML = joke.joke;
+                jokesTexts.push(jokeText);
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+    return jokesTexts;
+}
 
   
 async function initialLoad() {
-    try {
-        const response = await axios.request(options);
-        console.log(response.data);
-        response.data.forEach((joke) => {
-            const jokeText = document.createElement("p");
-            jokeText.innerHTML = joke.joke;
-            jokesContainer.appendChild(jokeText);
-        });
-    } catch (error) {
-        console.error(error);
-    }
+    refreshJokes();
   }
+
+
+
 
 await initialLoad();
